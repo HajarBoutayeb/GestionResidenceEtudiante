@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+    <!-- MATERIAL ICONS CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="container">
+    <!-- ASIDE (Sidebar) -->
+    <aside id="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+                <h2>Student<span class="danger">Space</span></h2>
+            </div>
+            <div class="close" id="close-btn">
+                <i class="fas fa-chevron-left"></i> <!-- Icône de fermeture -->
+            </div>
+        </div>
+        <div class="sidebar">
+            <a href="dashboard.html" class="active">
+                <span>🏠</span>
+                <h3>Vue d’Ensemble</h3>
+            </a>
+            <a href="listeAdmin.jsp">
+                <span>👨‍💼</span>
+                <h3>Admin</h3>
+            </a>
+            <a href="indexResidents.jsp">
+                <span>👤</span>
+                <h3>Résidents</h3>
+            </a>
+            <a href="index1.jsp">
+                <span>🛏️</span>
+                <h3>Chambres</h3>
+            </a>
+            <a href="paiement.jsp">
+                <span>💳</span>
+                <h3>Paiement</h3>
+            </a>
+            <a href="listeIncidents1.jsp">
+                <span>🔧</span>
+                <h3>Requêtes de Maintenance</h3>
+            </a>
+            <a href="indexTechniciens.jsp">
+                <span>👨‍🔧</span>
+                <h3>Technicien</h3>
+            </a>
+            <a href="ajouter-rejeter-residents.jsp">
+                <span>📝</span>
+                <h3>Demande d'Inscription</h3>
+            </a>
+            <a href="index.jsp">
+                <span>🚪</span>
+                <h3>Déconnexion</h3>
+            </a>
+        </div>
+    </aside>
+    <!-- END OF ASIDE -->
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <h1>Tableau de Bord</h1>
+
+        <div class="date">
+            <input type="date" aria-label="Sélectionner la date">
+        </div>
+
+        <!-- Insights container to hold all 6 graphs -->
+        <div class="insights">
+            <!-- Graph 1 : Total des Chambres -->
+            <div class="sales">
+                <span class="material-icons-sharp">analytics</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Total des Chambres</h3>
+                        <h1 id="totalChambres">--</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p id="tauxOccupationChambres">--</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted">Dernières 24 heures</small>
+            </div>
+
+            <!-- Graph 2 : Total des Résidents -->
+            <div class="expenses">
+                <span class="material-icons-sharp">bar_chart</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Total des Résidents</h3>
+                        <h1 id="totalResidents">--</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p id="tauxResidents">--</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted">Dernières 24 heures</small>
+            </div>
+
+            <!-- Graph 3 : Chambres Disponibles -->
+            <div class="income">
+                <span class="material-icons-sharp">stacked_line_chart</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Chambres Disponibles</h3>
+                        <h1 id="chambresDisponibles">--</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="number">
+                            <p id="tauxChambresDisponibles">--</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted">Dernières 24 heures</small>
+            </div>
+        </div>
+
+        <!-- RECENT ORDERS -->
+        <div class="recent-orders">
+            <h2>Paiements Récents</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Résident</th>
+                    <th>Montant Payé</th>
+                    <th>Date de Paiement</th>
+                    <th>Statut</th>
+                </tr>
+                </thead>
+                <tbody id="recentPayments">
+                <!-- Rows will be dynamically populated by JavaScript -->
+                </tbody>
+            </table>
+            <a href="paiement.jsp">Afficher tout</a>
+        </div>
+    </main>
+    <!-- END OF MAIN -->
+
+    <!-- RIGHT SECTION -->
+    <div class="right">
+        <div class="top">
+            <button id="menu-btn">
+                <span class="material-icons-sharp">menu</span>
+            </button>
+            <div class="profile">
+                <div class="info">
+                    <p>Hey, <b>HAJAR</b></p>
+                    <small class="text-muted">Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="images/ph2.jpg" alt="Admin Photo">
+                </div>
+            </div>
+        </div>
+
+        <!-- RECENT UPDATES -->
+        <div class="recent-updates">
+            <h2>Mises à Jour Récentes</h2>
+            <div class="updates" id="recentUpdates">
+                <!-- Les mises à jour seront ajoutées dynamiquement ici -->
+            </div>
+        </div>
+        <!-- END OF RECENT UPDATES -->
+
+        <!-- SALES ANALYTICS -->
+        <div class="sales-analytics">
+            <h2>Analytique des Paiements</h2>
+            <div class="item online">
+                <div class="icon">
+                    <span class="material-icons-sharp">shopping_cart</span>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>Paiements à Jour</h3>
+                        <small class="text-muted">Dernières 24 heures</small>
+                    </div>
+                    <h5 class="success">+39%</h5>
+                    <h3 id="paiementsAJour">--</h3>
+                </div>
+            </div>
+            <div class="item online">
+                <div class="icon">
+                    <span class="material-icons-sharp">shopping_cart</span>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>Paiements en Retard</h3>
+                        <small class="text-muted">Dernières 24 heures</small>
+                    </div>
+                    <h5 class="danger">-17%</h5>
+                    <h3 id="paiementsEnRetard">--</h3>
+                </div>
+            </div>
+            <div class="item online">
+                <div class="icon">
+                    <span class="material-icons-sharp">shopping_cart</span>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>Nouveaux Résidents</h3>
+                        <small class="text-muted">Dernières 24 heures</small>
+                    </div>
+                    <h5 class="success">+25%</h5>
+                    <h3 id="nouveauxResidents">--</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF RIGHT SECTION -->
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Function to fetch stats from the server
+    function fetchStats() {
+        $.ajax({
+            url: 'Dash', // URL of the servlet
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                // Update the total values and percentages dynamically
+                $('#totalChambres').text(data.totalChambres);
+                $('#tauxOccupationChambres').text(data.tauxOccupationChambres + '%');
+
+                $('#totalResidents').text(data.totalResidents);
+                $('#tauxResidents').text(data.tauxResidents + '%');
+
+                $('#chambresDisponibles').text(data.chambresDisponibles);
+                $('#tauxChambresDisponibles').text(data.tauxChambresDisponibles + '%');
+
+                $('#paiementsAJour').text(data.paiementsAJour);
+                $('#paiementsEnRetard').text(data.paiementsEnRetard);
+                $('#nouveauxResidents').text(data.nouveauxResidents);
+
+                // Populate recent payments
+                let recentPaymentsHtml = '';
+                data.recentPayments.forEach(payment => {
+                    recentPaymentsHtml += `
+                        <tr>
+                            <td>${payment.resident}</td>
+                            <td>${payment.montantPaye} DH</td>
+                            <td>${payment.datePaiement}</td>
+                            <td class="${payment.statut === 'Payé' ? 'primary' : 'warning'}">${payment.statut}</td>
+                        </tr>
+                    `;
+                });
+                $('#recentPayments').html(recentPaymentsHtml);
+
+                // Populate recent updates
+                let recentUpdatesHtml = '';
+                data.recentUpdates.forEach(update => {
+                    recentUpdatesHtml += `
+                        <div class="update">
+                            <div class="profile-photo">
+                                <img src="${update.photo}" alt="Profile Photo">
+                            </div>
+                            <div class="message">
+                                <p><b>${update.nom}</b> ${update.message}</p>
+                                <small class="text-muted">${update.timestamp}</small>
+                            </div>
+                        </div>
+                    `;
+                });
+                $('#recentUpdates').html(recentUpdatesHtml);
+            },
+            error: function() {
+                alert('Erreur lors de la récupération des statistiques.');
+            }
+        });
+    }
+
+    // Load stats on page load
+    $(document).ready(function() {
+        fetchStats();
+    });
+</script>
+</body>
+</html>
