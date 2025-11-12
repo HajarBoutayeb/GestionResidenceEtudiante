@@ -105,7 +105,7 @@ http://localhost:8080/GestionResidenceUniversitaire
 ## 📊 Screenshots
 
 ### 1. Accueil
-![accueil](./img/accueil.png)
+![accueil](img/accueil.png)
 
 ### 2. Tableau de bord
 ![tableau de bord](./img/tableau de bord.png)
