@@ -99,29 +99,39 @@ Accéder à l’application web
 
 http://localhost:8080/GestionResidenceUniversitaire
 
-📸 Captures d’écran
-
-Tableau de bord (Admin)
 
 
-Gestion des chambres
+
+## 📊 Screenshots
+
+### 1. Accueil
+![accueil](./img/accueil.png)
+
+### 2. Tableau de bord
+![tableau de bord](./img/tableau de bord.png)
+
+### 3. Interface demandes d'inscription
+![demandes d'inscription](./img/demandes d'inscription.png)
+
+### 4. Formulaire d'inscription
+![Formulaire d'inscription](./img/Formulaire d'inscription.png)
+
+### 5. Mise à jour profile
+![mise a jour profile](./img/mise a jour profile.png)
+
+### 6. Signalement de maintenance
+![signalement de maintenane](./img/signalement de maintenane.png)
 
 
-Gestion des requêtes de maintenance
+---
 
+## 📖 Documentation
 
-Profil et paiements (Résident)
+* 📑 Requirements Specification
+* 📐 UML Diagrams (use case, classes, sequence)
+* 📘 User Manual (optional)
 
-
-📖 Documentation
-
-📑 Spécifications et cahier des charges
-
-📐 Diagrammes UML (cas d’utilisation, classes, séquences)
-
-🧠 Conception et implémentation du système
-
-🧭 Manuel d’utilisation (facultatif)
+---
 
 👥 Auteur
 
