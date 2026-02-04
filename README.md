@@ -29,22 +29,18 @@ L’objectif est d’assurer une **gestion centralisée, efficace et transparent
 ## 🚀 Fonctionnalités
 
 ### 👩‍💼 Côté Administrateur :
-
 * 🏠 **Gestion des chambres** : ajout, modification, suppression, visualisation de la disponibilité.  
 * 👩‍🎓 **Gestion des résidents** : validation des préinscriptions, attribution des chambres, mise à jour des données.  
 * 💳 **Gestion des paiements** : suivi des statuts (payé, en retard, en attente), envoi de rappels, génération de **reçus PDF**.  
-* 🔧 **Gestion des requêtes de maintenance** : attribution de techniciens, suivi du statut (nouvelle, en cours, résolue).  
+* 🔧 **Gestion des requêtes de maintenance** : attribution de techniciens, suivi du statut.  
 * 👷 **Gestion des techniciens** : ajout, modification, activation/désactivation.  
-* 🧑‍💼 **Gestion des administrateurs secondaires** : ajout ou suppression d’administrateurs.  
-* 📊 **Tableau de bord** : visualisation des statistiques générales (occupation, paiements, maintenance, etc.).
+* 📊 **Tableau de bord** : visualisation des statistiques générales.
 
 ### 🧑‍🎓 Côté Résident :
-
-* 👤 **Préinscription et connexion** avec validation par l’administrateur.  
-* 🛏️ **Consultation des chambres disponibles** et soumission de demandes de réservation.  
-* 💰 **Consultation de l’historique des paiements** et téléchargement de reçus.  
-* 🛠️ **Soumission et suivi des requêtes de maintenance**.  
-* 🧾 **Mise à jour du profil personnel** (coordonnées, mot de passe).  
+* 👤 **Préinscription** et connexion sécurisée.  
+* 🛏️ **Réservation** : consultation et soumission de demandes.  
+* 💰 **Paiements** : historique et téléchargement de reçus.  
+* 🛠️ **Maintenance** : soumission et suivi des requêtes.
 
 ---
 
@@ -55,8 +51,6 @@ L’objectif est d’assurer une **gestion centralisée, efficace et transparent
 * **Base de données** : MySQL 8.0  
 * **Front-end** : HTML5, CSS3, JavaScript  
 * **Bibliothèques** : JDBC, iTextPDF  
-* **IDE** : IntelliJ IDEA / Eclipse  
-* **Modélisation UML** : StarUML / Draw.io  
 
 ---
 
@@ -67,75 +61,64 @@ GestionResidenceUniversitaire/
 │── src/                  # Code source Java (Models, DAO, Controllers)
 │── webapp/               # JSP, CSS, JS, Images
 │── WEB-INF/              # Fichier de configuration web.xml
-│── database/             # Scripts SQL pour la création de la base de données
-│── docs/                 # Documentation, diagrammes UML
+│── database/             # Scripts SQL
+│── docs/                 # Documentation & UML
 │── screenshots/          # Captures d’écran
-│── README.md             # Description du projet
+└── README.md             # Description du projet
 
 ⚙️ Installation et Exécution
 
 Cloner le projet
+git clone [https://github.com/HajarBoutayeb/GestionResidenceUniversitaire.git]
 
-git clone https://github.com/HajarBoutayeb/GestionResidenceUniversitaire.git
+Configuration
 
+Ouvrez le projet dans IntelliJ IDEA ou Eclipse.
 
-Ouvrir le projet dans IntelliJ IDEA ou Eclipse en tant que projet web dynamique.
+Créez la base de données residence_db et importez le fichier SQL.
 
-Configurer la base de données MySQL
+Configurez les identifiants dans DBConnection.java.
 
-Créez une base de données nommée residence_db.
+Lancement
 
-Importez le fichier SQL se trouvant dans le dossier /database.
+Déployez sur Apache Tomcat.
 
-Mettez à jour les identifiants de connexion dans le fichier DBConnection.java.
-
-Déployer le projet sur Apache Tomcat
-
-Utilisez Tomcat 9 ou 10 comme serveur d’exécution.
-
-Lancez l’application.
-
-Accéder à l’application web
-
-http://localhost:8080/GestionResidenceUniversitaire
-
-
-
+URL : http://localhost:8080/GestionResidenceUniversitaire
 
 ## 📊 Screenshots
 
-### 1. Accueil
+1. Accueil
 ![accueil](img/accueil.png)
 
-### 2. Tableau de bord
-![tableau de bord](./img/tableau de bord.png)
+2. Tableau de bord
+![tableau de bord](img/tableau de bord.png)
 
-### 3. Interface demandes d'inscription
-![demandes d'inscription](./img/demandes d'inscription.png)
+3. Interface demandes d'inscription
+![demandes d'inscription](img/demandes d'inscription.png)
 
-### 4. Formulaire d'inscription
-![Formulaire d'inscription](./img/Formulaire d'inscription.png)
+4. Formulaire d'inscription
+![Formulaire d'inscription](img/Formulaire d'inscription.png)
 
-### 5. Mise à jour profile
-![mise a jour profile](./img/mise a jour profile.png)
+5. Mise à jour profile
+![mise a jour profile](img/mise a jour profile.png)
 
-### 6. Signalement de maintenance
-![signalement de maintenane](./img/signalement de maintenane.png)
-
-
----
-
-## 📖 Documentation
-
-* 📑 Requirements Specification
-* 📐 UML Diagrams (use case, classes, sequence)
-* 📘 User Manual (optional)
+6. Signalement de maintenance
+![signalement de maintenance](img/signalement de maintenance.png)
 
 ---
 
-👥 Auteur
+📖 Documentation
 
-Hajar Boutayeb – Étudiante en Master Big Data & Data Science
-Faculté des Sciences Ben M’Sik – Université Hassan II de Casablanca
-Encadré par : M. Abdessamad Belangour
-Année universitaire : 2024/2025
+📑 Spécifications et cahier des charges
+
+📐 Diagrammes UML (cas d’utilisation, classes, séquences)
+
+🧠 Conception et implémentation du système
+
+🧭 Manuel d’utilisation (facultatif)
+
+## 👩‍💻 Auteure
+
+**Hajar Boutayeb**  
+📧 Email : hajarboutayeb3@gmail.com  
+🔗 LinkedIn : https://www.linkedin.com/in/hajar-boutayeb-25bb90303/
