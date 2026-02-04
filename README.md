@@ -87,24 +87,12 @@ URL : http://localhost:8080/GestionResidenceUniversitaire
 
 ## 📊 Screenshots
 
-1. Accueil
 ![accueil](img/page-accueil.png)
-
-2. Tableau de bord
-![tableau de bord](img/tableau-bord.png)
-
-3. Interface demandes d'inscription
-![demandes d'inscription](img/demandes-inscription.png)
-
-4. Formulaire d'inscription
-![Formulaire d'inscription](img/formulaire-inscription.png)
-
-5. Mise à jour profile
-![mise a jour profile](img/mise-a-jour-profil.png)
-
-6. Signalement de maintenance
-![signalement de maintenance](img/signalement-maintenance.png)
-
+![tableau-bord](img/tableau-bord.png)
+![demandes-inscription](img/demandes-inscription.png)
+![formulaire-inscription](img/formulaire-inscription.png)
+![mise-a-jour-profil](img/mise-a-jour-profil.png)
+![signalement-maintenance](img/signalement-maintenance.png)
 ---
 
 📖 Documentation
